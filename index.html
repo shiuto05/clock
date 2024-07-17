@@ -15,12 +15,7 @@ p {
   color: #fff
 }
   </style>
-</head>
-<body>
-    <p id="realtime"></p>
-  
-</body>
-  <script>
+    <script>
       function showClock() {
       let nowTime = new Date();
       let nowHour = twoDigit( nowTime.getHours() );
@@ -30,4 +25,11 @@ p {
       document.getElementById("realtime").innerHTML = msg;
     }
     setInterval('showClock()',1000);</script>
+</head>
+  
+<body>
+    <p id="realtime"></p>
+  
+</body>
+
 </html>
