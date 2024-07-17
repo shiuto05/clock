@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  body {
+  background-color: #333353;
+}
+p {
+  text-align: center;
+  font-size: 1200%;
+  color: #fff
+}
+  </style>
+</head>
+<body>
+    <p id="realtime"></p>
+  
+</body>
+  <script>
+      function showClock() {
+      let nowTime = new Date();
+      let nowHour = twoDigit( nowTime.getHours() );
+      let nowMin  = twoDigit( nowTime.getMinutes() );
+      let nowSec  = twoDigit( nowTime.getSeconds() );
+      let msg = nowHour + ":" + nowMin + ":" + nowSec;
+      document.getElementById("realtime").innerHTML = msg;
+    }
+    setInterval('showClock()',1000);</script>
+</html>
